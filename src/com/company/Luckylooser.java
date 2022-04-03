@@ -14,21 +14,23 @@ public class Luckylooser {
             len=arr2.length;
         }
         String[] arr3=new String[len];
+
+//        new method to calculate the array lenth
+//        String[] arr3= new String[arr1.length>arr2.length? arr1.length: arr2.length];
+
         boolean found=false;
         int k=0;
         for(int i=0; i<arr1.length; i++){
             for(int j=0; j<arr2.length && !found;j++){
-                if(arr1[i]==arr2[j]){
+                if(arr1[i].equals(arr2[j])){
                     found=true;
-                    arr3[k]=arr1[i];
-                    k++;
+                    arr3[k++]=arr1[i];
+//                    break;(then no need the boolean)
                 }
             }
-
             found=false;
             }
 
         return arr3;
-
     }
 }

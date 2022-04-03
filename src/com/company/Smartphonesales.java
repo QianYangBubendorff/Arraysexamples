@@ -32,11 +32,10 @@ public class Smartphonesales {
 
 //        method 2 with only one loop
 
-        int model =1;
+
         for(int i = 0;i <arr.length;i++) {
-            model = arr[i][0];
-            resultArray[model-1][0] = model;
-            resultArray[model-1][1] = resultArray[model-1][1] + arr[i][1];
+            resultArray[arr[i][0]-1][0] = arr[i][0];
+            resultArray[arr[i][0]-1][1] = resultArray[arr[i][0]-1][1] + arr[i][1];
         }
 
         return resultArray;
